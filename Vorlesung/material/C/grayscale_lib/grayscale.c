@@ -1,5 +1,5 @@
 // Grayscale Filter in C-Implementation
-// size: width*height of image
+// size: width*height of image in pixels
 // bytes: input image bytes in rgb format, will be overwritten!
 void grayscale_filter(int size, unsigned char* bytes)
 {

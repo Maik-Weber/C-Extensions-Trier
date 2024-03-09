@@ -24,7 +24,7 @@ static void grayscale_filter(int size, unsigned char* bytes)
 /*Wrapper for our function*/
 /*self points to the module object. */
 /*args points to a Python tuple object containing the arguments.*/
-static PyObject* method_grayscale_filter(PyObject* self, PyObject* args)
+PyObject* method_grayscale_filter(PyObject* self, PyObject* args)
 {
     int size = 0;
     PyObject* python_bytes;
@@ -86,7 +86,7 @@ static struct PyModuleDef grayscale_module_def =
 /*Module Init Function:
 - called once when the module is imported
 - returns the module object with which we work in Python
-Important: Py_Init_MODULE_NAME */
+Important: PyInit_MODULE_NAME */
 PyMODINIT_FUNC PyInit_grayscale_module(void)
 {
     return PyModule_Create(&grayscale_module_def);
